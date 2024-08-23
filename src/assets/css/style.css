@@ -29,8 +29,8 @@ body {
     font-weight: 700;
     color: var(--primary-color);
 }
-.navbar .input-group > .form-control:focus {
-    box-shadow: 0 0 0 .25rem rgba(182, 196, 231, .25);
+.navbar .input-group > .form-control:focus, .navbar .input-group:focus-within .input-group-text  {
+    box-shadow: none;
     border-color: var(--secondary-color);
 }
 .navbar .input-group-text svg {
@@ -137,6 +137,12 @@ body {
 .card {
     background-color: var(--secondary-color);
     padding: 15px 10px;
+    box-shadow: 0 4px 8px rgba(182,196,231,255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+    transform: scale(1.05); /* Enlarges the card slightly */
+    box-shadow: 0 8px 16px rgba(182,196,231,255, 0.2); /* Adds a deeper shadow */
 }
 .card-text {
     font-size: var(--card-title);
