@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #00013a;
+    --secondary-color: #b6c4e7;
+    --home-icon-color: #009de0;
+    --font-family: 'Raleway', sans-serif;
+    --body-white: #FFFFFF;
+    --card-title: 16px;
+    --kerning: 1px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--body-white);
+    letter-spacing: var(--kerning);
+}
+.container {
+    width: 1160px;
+}
+
+/* Header */
+.navbar {
+    background-color: var(--primary-color);
+}
+.navbar .input-group > .input-group-text, .navbar .input-group > .form-control {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.navbar .input-group > .form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(182, 196, 231, .25);
+    border-color: var(--secondary-color);
+}
+.navbar .input-group-text svg {
+    border-right: 1px solid var(--primary-color);
+    padding-right: 8px;
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.icon-circle-home {
+    background-color: var(--home-icon-color);
+    color: var(--primary-color);
+}
+
+.icon-circle-home:hover {
+    background-color: var(--secondary-color);
+}
+
+.icon-circle-settings {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.icon-circle-settings:hover {
+    background-color: var(--home-icon-color);
+    color: var(--body-white);
+}
+.navbar .dropdown {
+    width: 60px;
+}
+
+.navbar .dropdown-menu {
+    background: var(--primary-color);
+    color: var(--body-white);
+    border: 1px solid var(--secondary-color);
+    min-width: 220px;
+}
+
+.navbar .dropdown-menu a {
+    color: var(--body-white);
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.navbar .dropdown-menu a:not(:last-of-type) {
+    border-bottom: 1px solid var(--body-white);
+}
+
+.navbar .dropdown .dropdown-custom-components::after {
+    margin-top: .355em;
+    margin-left: .455em;
+    vertical-align: middle;
+}
+
+/* Pie Charts*/
+.recharts-pie-sector:focus, .recharts-pie-sector > *:focus {
+    outline: none !important;
+}
+.chart-title {
+    font-weight: 600;
+    font-size: var(--card-title);
+}
+.chart-popover {
+    min-width: 340px;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 20px 40px 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    border-radius: 10px;
+}
+.chart-popover ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.recharts-legend-wrapper {
+    bottom: -5px !important;
+}
+.recharts-legend-item {
+    font-size: var(--card-title);
+    margin-bottom: 10px;
+}
+.recharts-legend-item-text {
+    color: var(--body-white) !important;
+}
+
+/* Cards */
+.card {
+    background-color: var(--secondary-color);
+    padding: 15px 10px;
+}
+.card-text {
+    font-size: var(--card-title);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.card-body svg {
+    width: 65px;
+    height: 120px;
+    color: var(--secondary-color);
+    stroke: var(--primary-color);
+    stroke-width: 22px;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+}
